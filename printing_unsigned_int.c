@@ -40,7 +40,7 @@ int print_u(va_list u)
  * Return: number of digits printed
  */
 
-int print_o(va_list 0)
+int print_o(va_list o)
 {
 	unsigned int b[11];
 	unsigned int i, m, n, sum;
