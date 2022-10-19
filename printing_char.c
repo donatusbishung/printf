@@ -42,7 +42,7 @@ int print_s(va_list s)
 static int hex_print(char c)
 {
 	int riper;
-	char diff = 'A'- ':';
+	char diff = 'A' - ':';
 	char d[2];
 
 	d[0] = c / 16;

@@ -34,4 +34,4 @@ int print_R(va_list R)
 		}
 	}
 	return (n_char);
-}	
+}
