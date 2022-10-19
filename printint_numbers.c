@@ -18,7 +18,7 @@ int print_i(va_list i)
 	for (j = 1; j < 10; j++)
 	{
 		m /= 10;
-		b[j] = (n/m) % 10;
+		b[j] = (n / m) % 10;
 	}
 	if (n < 0)
 	{
