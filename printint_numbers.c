@@ -52,6 +52,7 @@ int print_d(va_list d)
 
 	n = va_arg(d, int);
 	m = 1000000000;
+	riper = 0;
 	b[0] = n / m;
 	for (j = 1; j < 10; j++)
 	{
@@ -75,4 +76,4 @@ int print_d(va_list d)
 		}
 	}
 	return (riper);
-}
+i}
