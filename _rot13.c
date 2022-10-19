@@ -16,20 +16,20 @@ int print_R(va_list R)
 	str = va_arg(R, char *);
 	if (str == NULL)
 		str = "(ahyy)";
-	for (i = 0; str[i]; i++)
+	for (len = 0; str[len]; len++)
 	{
-		for (j = 0; in[j]; j++)
+		for (i = 0; in[i]; i++)
 		{
-			if (in[j] == str[i])
+			if (in[i] == str[len])
 			{
-				_putchar(out[j]);
+				_putchar(out[i]);
 				n_char++;
 				break;
 			}
 		}
-		if (!in[j])
+		if (!in[i])
 		{
-			_putchar(str[i]);
+			_putchar(str[len]);
 			n_char++;
 		}
 	}
