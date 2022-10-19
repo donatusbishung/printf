@@ -22,16 +22,16 @@ int print_c(va_list c)
  */
 int print_s(va_list s)
 {
-	int riper;
+	int count;
 	char *str = va_arg(s, char *);
 
 	if (str == NULL)
 		str = "(null)";
-	for (count = 0; str[riper]; riper++)
+	for (count = 0; str[count]; count++)
 	{
-		_putchar(str[riper]);
+		_putchar(str[count]);
 	}
-	return (riper);
+	return (count);
 }
 /**
  * hex_print - prints a characters ascii value in uppercase hex
