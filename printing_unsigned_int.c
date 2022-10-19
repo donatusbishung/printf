@@ -75,23 +75,23 @@ int print_o(va_list o)
 int print_b(va_list b)
 {
 	unsigned int n, m, i, sum;
-	unsigned int b[32];
+	unsigned int c[32];
 	int riper;
 
 	n = va_arg(b, unsigned int);
 	m = 2147483648; /* (2 ^ 31)*/
-	b[0] = n / m;
+	c[0] = n / m;
 	for (i = 1; i < 32; i++)
 	{
 		m /= 2;
-		b[i] = (n / m) % 2;
+		c[i] = (n / m) % 2;
 	}
 	for (i = 0, sum = 0, riper = 0; i < 32; i++)
 	{
-		sum += b[i];
+		sum += c[i];
 		if (sum || i == 31)
 		{
-		_putchar('0' + b[i]);
+		_putchar('0' + c[i]);
 		riper++;
 		}
 	}
