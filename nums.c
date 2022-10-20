@@ -58,11 +58,11 @@ void print_number(int n)
 }
 
 /**
- * count_digit - counts digits
+ * count_digits - counts digits
  * @i: integer
  * Return: number of digits
  */
-int count_digit(int i)
+int count_digits(int i)
 {
 	unsigned int d = 0;
 	unsigned int u;
