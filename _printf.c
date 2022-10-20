@@ -42,5 +42,5 @@ int _printf(const char *format, ...)
 	}
 	_putchar(-1);
 	va_end(list);
-	return (count)
+	return (count);
 }
