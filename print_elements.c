@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get-print - all printing functions are selected
+ * get_print - all printing functions are selected
  * depending on the conversion specifier passed to _printf
  * @s: character that holds the conversion specifier
  * Return: pointer to matching printing function
