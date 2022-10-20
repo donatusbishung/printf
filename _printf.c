@@ -2,7 +2,6 @@
 
 /**
  * _printf - produces output according to a format
- *
  * @format: string containing all char and specifiers
  * Return: lenght of the formatted output string
  */
@@ -15,7 +14,7 @@ int _printf(const char *format, ...)
 	flags_t flags = {0, 0, 0};
 
 	register int count = 0;
-	
+
 	va_start(list, format);
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
