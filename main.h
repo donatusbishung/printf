@@ -6,30 +6,60 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-int _printf(const char *format, ...);
-int _putchar(char c);
 /**
  * struct print - structure for printing various types
- * @t: type to print
+ * @c: type to print
  * @f: function to print
  */
-typedef struct print
+typedef struct printHandler
 {
-	char *t;
-	int (*f)(va_list);
-} print_t;
-int print_c(va_list c);
-int print_s(va_list s);
-int print_i(va_list i);
-int print_d(va_list d);
-int print_u(va_list u);
-int print_b(va_list b);
-int print_o(va_list o);
-int print_x(va_list x);
-int print_X(va_list X);
-int print_p(va_list p);
-int print_S(va_list S);
-int print_r(va_list r);
-int print_R(va_list R);
+	char c;
+	int (*f)(va_list ap, flags_t *f);
+} ph;
+
+/**
+ * struct flags - struct containing flags to turn on
+ * @plus: for + character
+ * @space: for ' ' character
+ * @hash: for # character
+ */
+typedef struct flags
+{
+	int plus;
+	int space;
+	int hash;
+} flags_t;
+
+int print_int(va_list l, flags_t *f);
+void print_number(int n);
+int print_unsigned(va_list l, flags_t *f);
+int count_digits(int i);
+
+int print_hex(va_list l, flags_t *f);
+int print_hex_big(va_list l, flags_t *f);
+int print_binary(va_list l, flags_t *f);
+int print_octal(va_list l, flags_t *f);
+
+char *converter(unsigned long int num, int base, int lowercases);
+
+int _printf(const char *format, ...);
+
+int (*get_flag(char s))(va_list, flags_t *f);
+
+int get_flag(char s, flags_t *f);
+
+int print_string(va_list l, flags_t *f);
+int print_char(va_list l, flags_t *f);
+
+int _putchar(char c);
+int _puts(char c);
+
+int print_rot13(va_list l, flags_t *f);
+int print_rev(va_list l, flags_t *f);
+int print_bigS(va_list l, flags_t *f);
+
+int print_address(va_list l, flags_t *f);
+
+int print_percent(va_list l, flags_t *f);
 
 #endif /* MAIN_H */
