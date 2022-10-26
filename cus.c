@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prints_bigS - non printable characters
+ * print_bigS - non printable characters
  * @l: argument list
  * @f: pointer
  * Return: number of char printed
